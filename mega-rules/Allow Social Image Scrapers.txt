@@ -1,0 +1,47 @@
+(
+  (
+    http.user_agent contains "WhatsApp"
+    or http.user_agent contains "facebookexternalhit"
+    or http.user_agent contains "Twitterbot"
+    or http.user_agent contains "Slackbot"
+    or http.user_agent contains "Discordbot"
+    or http.user_agent contains "TelegramBot"
+    or http.user_agent contains "LinkedInBot"
+    or http.user_agent contains "Pinterest"
+    or http.user_agent contains "SkypeUriPreview"
+    or http.user_agent contains "GoogleImageProxy"
+    or http.user_agent contains "Outlook"
+    or http.user_agent contains "Microsoft Office"
+    or http.user_agent contains "MacOutlook"
+    or http.user_agent contains "Thunderbird"
+    or http.user_agent contains "YahooMobile"
+  )
+)
+or
+(
+  (http.request.uri.path contains ".jpg"
+    or http.request.uri.path contains ".jpeg"
+    or http.request.uri.path contains ".png"
+    or http.request.uri.path contains ".webp"
+    or http.request.uri.path contains ".gif")
+  and
+  (
+    http.referer contains "facebook.com"
+    or http.referer contains "twitter.com"
+    or http.referer contains "t.co"
+    or http.referer contains "whatsapp.com"
+    or http.referer contains "web.whatsapp.com"
+    or http.referer contains "api.whatsapp.com"
+    or http.referer contains "instagram.com"
+    or http.referer contains "linkedin.com"
+    or http.referer contains "t.me"
+    or http.referer contains "discord.com"
+    or http.referer contains "mail.google.com"
+    or http.referer contains "gmail.com"
+    or http.referer contains "outlook.live.com"
+    or http.referer contains "outlook.office.com"
+    or http.referer contains "outlook.office365.com"
+    or http.referer contains "protection.outlook.com"
+    or http.referer contains "mail.yahoo.com"
+  )
+)
