@@ -45,3 +45,5 @@ or
     or http.referer contains "mail.yahoo.com"
   )
 )
+
+//OMITIR, Todas las reglas personalizadas, Mas componentes que omitir: Proteccion, nivel, reglas.

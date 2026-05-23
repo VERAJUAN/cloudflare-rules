@@ -32,7 +32,3 @@ or
     and not http.request.uri.path.extension in {"png" "jpg" "jpeg" "gif" "svg" "webp"})
   or (not ssl and not cf.client.bot)
 )
-and not
-(
-  (ip.src eq 2a02:4780:14:82c9::1) and (http.request.uri.path contains "/wp-cron.php")
-)

@@ -1,0 +1,3 @@
+(ip.src in {IPV4 IPV6}) or (http.user_agent contains "Let's Encrypt validation server") or (http.request.uri.path contains "/.well-known/acme-challenge/")
+
+//OMITIR, Todas!, Mas componentes, comprobacion, nivel de seguridad
